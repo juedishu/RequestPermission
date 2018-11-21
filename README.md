@@ -10,7 +10,9 @@
 
 (1)compile 'com.lovedise:permissiongen:0.0.6'<br>
 
-(2)private void :permissiongen() {<br>
+(2)
+```
+private void :permissiongen() {<br>
 //处理需要动态申请的权限<br>
 PermissionGen.with(LocationActivity.this)<br>
 .addRequestCode(SUCCESSCODE)<br>
@@ -22,14 +24,16 @@ Manifest.permission.READ_EXTERNAL_STORAGE,<br>
 Manifest.permission.READ_PHONE_STATE<br>
 ).request();<br>
 }<br>
-
+```
 (3)//申请权限结果的返回
+```
 @Override
 public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
 PermissionGen.onRequestPermissionsResult(this, requestCode, permissions, grantResults);
 }
-
+```
 //权限申请成功
+```
 @PermissionSuccess(requestCode = Constant.SUCCESSCODE)
 public void doSomething() {
 //在这个方法中做一些权限申请成功的事情
@@ -38,7 +42,7 @@ public void doSomething() {
 @PermissionFail(requestCode = Constant.SUCCESSCODE)
 public void doFailSomething() {
 }
-
+```
 
 
 
