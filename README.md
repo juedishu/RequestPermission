@@ -12,18 +12,18 @@
 
 (2)
 ```
-private void :permissiongen() {<br>
-//处理需要动态申请的权限<br>
-PermissionGen.with(LocationActivity.this)<br>
-.addRequestCode(SUCCESSCODE)<br>
-.permissions(<br>
-Manifest.permission.ACCESS_COARSE_LOCATION,<br>
-Manifest.permission.ACCESS_FINE_LOCATION,<br>
-Manifest.permission.WRITE_EXTERNAL_STORAGE,<br>
-Manifest.permission.READ_EXTERNAL_STORAGE,<br>
-Manifest.permission.READ_PHONE_STATE<br>
-).request();<br>
-}<br>
+private void :permissiongen() {
+//处理需要动态申请的权限
+PermissionGen.with(LocationActivity.this)
+.addRequestCode(SUCCESSCODE)
+.permissions(
+Manifest.permission.ACCESS_COARSE_LOCATION,
+Manifest.permission.ACCESS_FINE_LOCATION,
+Manifest.permission.WRITE_EXTERNAL_STORAGE,
+Manifest.permission.READ_EXTERNAL_STORAGE,
+Manifest.permission.READ_PHONE_STATE
+).request();
+}
 ```
 (3)//申请权限结果的返回
 ```
